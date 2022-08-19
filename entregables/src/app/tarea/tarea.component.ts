@@ -7,10 +7,7 @@ import { Tarea } from '../lista-tareas/interface-tarea';
   styleUrls: ['./tarea.component.scss']
 })
 export class TareaComponent implements OnInit {
-@Input() tarea: Tarea ={
-  nombre : "",
-    estado: false
-};
+@Input() tarea!: Tarea;
 
  
   constructor() { }

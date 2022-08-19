@@ -1,0 +1,9 @@
+<div>
+    
+    <h1>Lista de tareas de Nico</h1>
+    <app-add-tarea></app-add-tarea> 
+    <ul >
+        <app-tarea *ngFor ="let tarea of tareas" [tarea]=tarea></app-tarea>
+    </ul>
+
+</div>

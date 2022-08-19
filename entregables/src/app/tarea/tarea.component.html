@@ -1,0 +1,5 @@
+<li [ngClass] = "{terminada: tarea.estado}">
+    <input *ngIf="!tarea.estado; else elseBlock" type="checkbox" >
+    <ng-template #elseBlock> <input checked type="checkbox" ></ng-template>
+    {{tarea.nombre}} <button><span class="material-symbols-outlined">delete</span></button> 
+</li>

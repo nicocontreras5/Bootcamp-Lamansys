@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Tarea } from '../lista-tareas/interface-tarea';
+import { Tarea } from '../lista-tareas/Tarea';
 
 @Component({
   selector: 'app-tarea',

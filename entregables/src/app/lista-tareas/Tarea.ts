@@ -1,5 +1,4 @@
 export interface Tarea {
     nombre : string;
-    estado: Boolean;
-    
+    estado: boolean
 }

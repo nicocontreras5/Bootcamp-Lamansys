@@ -13,31 +13,13 @@ export class ListaTareasComponent implements OnInit {
     {
       nombre: "Leer documentacion Angular",
       estado: false,
+      id: 1,
 
     },
     {
       nombre: "Entregable 1",
       estado: false,
-
-    },
-    {
-      nombre: "Componentes",
-      estado: true,
-
-    },
-    {
-      nombre: "Modulos",
-      estado: false,
-
-    },
-    {
-      nombre: "Atomic desing",
-      estado: false,
-
-    },
-    {
-      nombre: "Comunicar componentes",
-      estado: true,
+      id: 2,
 
     }
   ]
@@ -46,4 +28,25 @@ export class ListaTareasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addTarea(nameTarea: string){
+    let newTarea: Tarea =  {
+      nombre: nameTarea,
+      estado: false,
+      id: this.tareas.length+1
+     
+    };
+
+    this.tareas.unshift(newTarea);
+  }
+
+  deleteTarea(id: number){
+
+    let indexOfObject = this.tareas.findIndex((tarea) => {
+      return tarea.id === id;
+    });
+    if (indexOfObject !== -1) {
+      this.tareas.splice(indexOfObject, 1);
+    }
+   
+  }
 }

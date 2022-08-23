@@ -1,5 +1,5 @@
 <li [ngClass] = "{terminada: tarea.estado}">
-    <input *ngIf="!tarea.estado; else elseBlock" type="checkbox" >
-    <ng-template #elseBlock> <input checked type="checkbox" ></ng-template>
-    {{tarea.nombre}} <button><span class="material-symbols-outlined">delete</span></button> 
+    <input *ngIf="!tarea.estado; else elseBlock" type="checkbox"  (change)="updateTarea()">
+    <ng-template #elseBlock> <input checked type="checkbox" (change)="updateTarea()" ></ng-template>
+    {{tarea.nombre}} <button><span class="material-symbols-outlined" (click)="deleteTarea(tarea.id)">delete</span></button> 
 </li>

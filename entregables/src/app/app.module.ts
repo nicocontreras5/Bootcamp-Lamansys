@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListaTareasComponent } from './lista-tareas/lista-tareas.component';
-import { AddTareaComponent } from './add-tarea/add-tarea.component';
-import { TareaComponent } from './tarea/tarea.component';
+import { ListTasksComponent } from './list-tasks/list-tasks.component';
+import { AddTaskComponent } from './add-task/add-task.component';
+import { TaskComponent } from './Task/task.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 
@@ -13,9 +13,9 @@ import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
-    ListaTareasComponent,
-    AddTareaComponent,
-    TareaComponent,
+    ListTasksComponent,
+    AddTaskComponent,
+    TaskComponent,
   
    
   ],

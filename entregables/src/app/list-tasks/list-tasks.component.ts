@@ -9,6 +9,8 @@ import { Task } from './Task';
   styleUrls: ['./list-tasks.component.scss']
 })
 export class ListTasksComponent implements OnInit {
+  lastId= 2;
+  user = "Nico";
   arrayTask: Task[] = [
     {
       name: "Leer documentacion Angular",
@@ -23,20 +25,26 @@ export class ListTasksComponent implements OnInit {
 
     }
   ]
+
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
   addTask(task: string){
+   
+
     let newTarea: Task =  {
       name: task,
       status: false,
-      id: this.arrayTask.length+1
+      id: this.lastId +1
      
     };
-
     this.arrayTask.unshift(newTarea);
+    this.lastId++;
+
   }
 
   deleteTask(id: number){
@@ -46,7 +54,8 @@ export class ListTasksComponent implements OnInit {
     });
     if (indexOfObject !== -1) {
       this.arrayTask.splice(indexOfObject, 1);
+    
     }
-   
+    
   }
 }

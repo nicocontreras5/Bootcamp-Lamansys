@@ -9,22 +9,9 @@ import { Task } from './Task';
   styleUrls: ['./list-tasks.component.scss']
 })
 export class ListTasksComponent implements OnInit {
-  lastId= 2;
+  lastId= 0;
   user = "Nico";
-  arrayTask: Task[] = [
-    {
-      name: "Leer documentacion Angular",
-      status: false,
-      id: 1,
-
-    },
-    {
-      name: "Entregable 1",
-      status: false,
-      id: 2,
-
-    }
-  ]
+  arrayTask: Task[] = []
 
   
   constructor() { }

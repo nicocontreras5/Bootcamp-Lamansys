@@ -14,7 +14,11 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {
   }
 
-addTask(task: HTMLInputElement ){
+
+  
+addTask(event: Event ,task: HTMLInputElement){
+
+  event.preventDefault();
   if (task.value != "") {
     this.newTask.emit(task.value);
     task.value= "";

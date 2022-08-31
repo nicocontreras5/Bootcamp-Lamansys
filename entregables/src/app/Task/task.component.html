@@ -1,5 +1,12 @@
-<li [ngClass] = "{terminada: task.status}">
-    <input *ngIf="!task.status; else elseBlock" type="checkbox"  (change)="updateTask()">
-    <ng-template #elseBlock> <input checked type="checkbox" (change)="updateTask()" ></ng-template>
-    {{task.name}} <button><span class="material-symbols-outlined" (click)="deleteTask(task.id)">delete</span></button> 
-</li>
+<div [ngClass] = "{terminada: task.status}" class="container">
+    <div>
+       <input type="checkbox"  (change)="updateTask()" [checked]="task.status">
+        <p>{{task.name}}</p>
+    </div>
+    <div class="btns">
+        <app-button tipo="content_paste"></app-button>
+        <app-button tipo="share"></app-button>
+        <app-button tipo="delete" (click)="deleteTask()"></app-button>
+    </div>
+   
+</div>

@@ -1,20 +1,21 @@
+@use '../assets/scss/variables';
+
 form{
+    margin: 32px 0 16px 0;
+    padding: 8px;
     display: flex;
-    justify-content: center;
-    margin: 23px 0;
-}
+    justify-content: space-between;
+    background-color: variables.$negro10;
+    > input{
+        background-color: transparent;
+        width: 100%;
+        margin-right: 8px;
+       
+        border: none;
+        font-size: 24px;
+    }
 
-form input{
-    width: 215px;
-    height: 25px;
-    padding: 5px;
-    border: 1px solid black;
-    margin-right: 5px;
-}
-
-form button{
-    background-color: white;
-    border: 1px solid black;
-    padding: 5px;
-    width: 80px;
+    > input:focus{
+        outline: none;
+    }
 }

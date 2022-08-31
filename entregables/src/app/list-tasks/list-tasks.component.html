@@ -1,9 +1,9 @@
-<div>
-    <h1>Lista de tareas de {{user}}</h1>
-    <app-add-tarea (newTask)="addTask($event)"></app-add-tarea> 
 
-    <ul >
-        <app-tarea *ngFor ="let task of arrayTask" [task]="task" (TaskDelete)="deleteTask($event)"></app-tarea>
-    </ul>
+<ul >
+    <li *ngFor ="let task of arrayTask">
+        <app-tarea  [task]="task" (TaskDelete)="deleteTask(task.id)"></app-tarea>
+    </li>
+       
+</ul>
 
-</div>
+

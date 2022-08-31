@@ -1,0 +1,14 @@
+@use '../../assets/scss/variables';
+
+header{
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    padding: 0 8px;
+    > h1{
+        color: variables.$negro;
+        margin: 0;
+        font-size: 36px;
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Task } from './Task';
 
 
@@ -11,7 +11,8 @@ import { Task } from './Task';
 export class ListTasksComponent implements OnInit {
   lastId= 0;
   user = "Nico";
-  arrayTask: Task[] = []
+  @Input() arrayTask !: Task[];
+  @Output() arrayTaskChange = new EventEmitter<Task[]>();
 
   
   constructor() { }
@@ -20,20 +21,6 @@ export class ListTasksComponent implements OnInit {
   }
 
 
-  addTask(task: string){
-   
-
-    let newTarea: Task =  {
-      name: task,
-      status: false,
-      id: this.lastId +1
-     
-    };
-    this.arrayTask.unshift(newTarea);
-    this.lastId++;
-
-  }
-
   deleteTask(id: number){
 
     let indexOfObject = this.arrayTask.findIndex((task) => {
@@ -41,7 +28,7 @@ export class ListTasksComponent implements OnInit {
     });
     if (indexOfObject !== -1) {
       this.arrayTask.splice(indexOfObject, 1);
-    
+      this.arrayTaskChange.emit(this.arrayTask);
     }
     
   }

@@ -1,0 +1,10 @@
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@mixin space-sss {
+    @include space-between();
+    color: red;
+}

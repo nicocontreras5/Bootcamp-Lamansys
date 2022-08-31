@@ -1,1 +1,8 @@
-<app-lista-tareas ></app-lista-tareas>
+<div class="container">
+    <app-button #btn_toggle (click)="toggleTheme()" [tipo]="theme"></app-button>
+    <app-header [user]="user"></app-header>
+    <app-add-tarea (newTask)="addTask($event)"></app-add-tarea> 
+    <hr>
+    <app-lista-tareas [(arrayTask)]="arrayTask" ></app-lista-tareas>
+</div>
+

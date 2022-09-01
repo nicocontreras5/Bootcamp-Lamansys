@@ -12,8 +12,5 @@ export class ButtonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ccc(){
-    console.log("Ss");
-  }
 
 }

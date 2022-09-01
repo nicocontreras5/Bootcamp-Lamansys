@@ -35,4 +35,12 @@
     
 }
 
+@media (max-width: 576px){
+   
+    .container div:first-child input[type="checkbox"]+p{
+        font-size: 15px;
+    }
+
+   
+}
 

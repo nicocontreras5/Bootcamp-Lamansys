@@ -1,6 +1,8 @@
-@use '../assets/scss/variables';
+@use '../../assets/scss/variables';
+
 
 form{
+    backdrop-filter: blur(10px);
     margin: 32px 0 16px 0;
     padding: 8px;
     display: flex;

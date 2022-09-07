@@ -16,7 +16,7 @@ export class TaskComponent implements OnInit {
   constructor() { }
 
   copyTask(){
-    window.navigator['clipboard'].writeText(this.task.name)
+    window.navigator['clipboard'].writeText(this.task.name);
   }
 
   updateTask(){

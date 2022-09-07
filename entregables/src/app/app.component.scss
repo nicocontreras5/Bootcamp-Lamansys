@@ -4,29 +4,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 
+
+.dark_mode{
+    --body-backgrount-color: #{variables.$negro};
+    --negro-blanco: #{variables.$blanco};
+    --negro10-blanco10: #{variables.$blanco20};
+    --negro50-blacno50:#{variables.$blanco50};
+}
+
+.light_mode{
+    --body-backgrount-color: #{variables.$blanco};
+    --negro-blanco: #{variables.$negro};
+    --negro10-blanco10: #{variables.$negro10};
+    --negro20-blanco20: #{variables.$blanco20};
+    --negro50-blacno50:#{variables.$negro50};
+}
+
 .container{
+    background-color: var(--body-backgrount-color);
+    padding: 10% 30%;
     display: flex;
     flex-direction: column;
-    width: 480px;
+    height: 100%;
     margin: auto;
     > hr{
-        background-color: black;
+        background-color: var(--negro-blanco);
         height: 1px;
         margin:0;
     }
-
-    
-    app-add-tarea{
-        position: sticky;
-        top: 24px;
-   
-    }
-
-    :first-child{
-        margin: 8px 8px 0 0;
-        align-self: flex-end;
-    }
-
 }
 
 @media (max-width: 576px){

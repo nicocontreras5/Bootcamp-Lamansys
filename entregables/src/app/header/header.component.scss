@@ -8,9 +8,14 @@ header{
     align-items: center;    
     padding: 0 8px;
     > h1{
-        color: variables.$negro;
+        color: var(--negro-blanco);
         margin: 0;
         font-size: 36px;
+    }
+    :first-child + div{
+        display: flex;
+        align-items: center;
+        gap: 8px;
     }
 }
 

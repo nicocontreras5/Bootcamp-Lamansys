@@ -15,9 +15,23 @@ export class TaskComponent implements OnInit {
 
   constructor() { }
 
+  copyTask(){
+    window.navigator['clipboard'].writeText(this.task.name)
+  }
+
   updateTask(){
   
     this.task.status =  !this.task.status;
+    
+  }
+
+  shareTask(){
+  
+    window.navigator.share({
+        title: 'Tarea: ' + this.task.name,
+        text: this.task.name,
+        url: 'https://lista-Tareas/tarea/'+ this.task.id,
+      })
     
   }
 

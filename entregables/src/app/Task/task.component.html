@@ -4,8 +4,8 @@
         <p>{{task.name}}</p>
     </div>
     <div class="btns">
-        <app-button tipo="content_paste"></app-button>
-        <app-button tipo="share"></app-button>
+        <app-button tipo="content_paste" (click)="copyTask()"></app-button>
+        <app-button tipo="share" (click)="shareTask()"></app-button>
         <app-button tipo="delete" (click)="deleteTask()"></app-button>
     </div>
    

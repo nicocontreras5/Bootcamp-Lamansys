@@ -1,5 +1,8 @@
 <header>
     <h1>Lista de tareas de {{user}}</h1>
-    <app-button tipo="fullScreen"></app-button>
+    <div>
+        <app-button tipo="fullScreen" (click)="toggleFullScreen()"></app-button>
+        <app-button tipo={{theme}} #btn_toggle (click)="toggleThemeHeadera()"></app-button>
+    </div>
 </header>
 

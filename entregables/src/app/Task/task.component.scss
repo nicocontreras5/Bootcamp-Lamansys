@@ -1,12 +1,13 @@
-@use '../../assets/scss/variables';
+
 
 .terminada{
     text-decoration: line-through;
 }
 
 .container{
+    color: var(--negro-blanco);
     margin: 16px 0;
-    background-color: variables.$negro10;
+    background-color: var(--negro10-blanco10);
     display: flex;
     padding: 8px;
     justify-content: space-between;
@@ -16,7 +17,6 @@
     }
     & div:first-child{
     
-      
         input[type="checkbox"]{
             height: 24px;
             width: 24px;

@@ -1,6 +1,5 @@
-<div class="container">
-    <app-button #btn_toggle (click)="toggleTheme()" [tipo]="theme"></app-button>
-    <app-header [user]="user"></app-header>
+<div class="container" [ngClass]="theme">
+    <app-header [user]="user" (themeChange)="toggleTheme($event)"></app-header>
     <app-add-tarea (newTask)="addTask($event)"></app-add-tarea> 
     <hr>
     <app-lista-tareas [(arrayTask)]="arrayTask" ></app-lista-tareas>

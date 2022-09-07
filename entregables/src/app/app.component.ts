@@ -8,7 +8,7 @@ import { Task } from './list-tasks/Task';
 })
 export class AppComponent {
   title = 'entregables';
-  theme: string ="light_mode";
+  theme: String= "light_mode";
   user = "Nico";
   arrayTask: Task[] = [
     {
@@ -54,11 +54,9 @@ export class AppComponent {
 
   }
 
-
-  toggleTheme(){
+  toggleTheme(theme: String){
+    this.theme= theme;
     
-    this.theme = this.theme === "light_mode" ? "dark_mode" : "light_mode";
-
   }
 
 
